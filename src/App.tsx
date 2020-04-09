@@ -29,7 +29,7 @@ class App extends Component<AppProps, AppState> {
     render() {
         return (
             <div>
-                <h1>Robot amount: {this.state.robots}</h1>
+                <h1 className={"App-header"}>Robot amount: {this.state.robots}</h1>
                 <Clicker clickHandler={() => this.clickHandler()}/>
             </div>
         );

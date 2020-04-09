@@ -1,5 +1,5 @@
 .clicker {
-    display: flex;
+    display: block;
     flex-direction: column;
     background-color: #95dada;
     /*border: 1px solid grey;*/
@@ -11,6 +11,9 @@
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
     border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
 }
 
 .clicker:hover {
