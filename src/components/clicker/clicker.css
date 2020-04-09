@@ -16,10 +16,26 @@
     width: 40%;
 }
 
+
+@media (prefers-reduced-motion: no-preference) {
+    .clicker {
+        animation: robot-spin infinite 20s linear;
+    }
+}
+
+@keyframes robot-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .clicker:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) perspective(1px);
 }
 
 .clicker:active {
-    transform: scale(0.95);
+    transform: scale(0.95) perspective(1px);
 }

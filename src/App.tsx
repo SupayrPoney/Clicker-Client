@@ -3,6 +3,7 @@ import './App.css';
 import {Clicker} from "./components/clicker/clicker";
 import InfrastructureList from "./components/infrastructure/infrastructureList";
 import {InfrastructureInterface} from "./components/infrastructure/infrastructure";
+import numeral from 'numeral-es6';
 
 interface AppProps {
 
@@ -83,7 +84,8 @@ class App extends Component<AppProps, AppState> {
     render() {
         return (
             <div>
-                <h1 className={"App-header"}>Robot amount: {Math.floor(this.state.robots)}</h1>
+                <h1 className={"App-header"}>Robot
+                    amount: {numeral(Math.floor(this.state.robots)).format('0.00 a')}</h1>
                 <Clicker clickHandler={() => this.clickHandler()}/>
                 <hr/>
                 <InfrastructureList infrastructures={this.state.infrastructures}
