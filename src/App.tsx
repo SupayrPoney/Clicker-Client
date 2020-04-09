@@ -23,7 +23,7 @@ class App extends Component<AppProps, AppState> {
                 {
                     id: 0,
                     name: "Factory",
-                    amount: 0,
+                    amount: 1,
                     price: 100,
                     income: 10
                 },
@@ -58,6 +58,7 @@ class App extends Component<AppProps, AppState> {
         let infrastructure = infrastructures[infrastructureIndex];
         if (this.state.robots >= infrastructure.price) {
             infrastructure.amount += 1;
+            infrastructure.price = Math.floor(1.1 * infrastructure.price)
             this.setState({
                 infrastructures: infrastructures,
                 robots: this.state.robots - infrastructure.price
@@ -86,7 +87,9 @@ class App extends Component<AppProps, AppState> {
                 <Clicker clickHandler={() => this.clickHandler()}/>
                 <hr/>
                 <InfrastructureList infrastructures={this.state.infrastructures}
-                                    infraClickHandler={this.infraClickHandler}/>
+                                    infraClickHandler={this.infraClickHandler}
+                                    amountRobots={this.state.robots}
+                />
             </div>
         );
     }

@@ -1,7 +1,6 @@
 .infrastructure {
     display: flex;
     flex-direction: column;
-    background-color: #86da87;
     border: 1px solid grey;
     border-radius: 5px;
     padding: 25px;
@@ -15,6 +14,14 @@
     left: 20px;
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
+}
+
+.affordable {
+    background-color: #86da87;
+}
+
+.unaffordable {
+    background-color: #da3f43;
 }
 
 .infrastructure:hover {

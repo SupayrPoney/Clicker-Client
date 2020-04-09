@@ -3,14 +3,17 @@ import {Infrastructure, InfrastructureInterface} from "./infrastructure";
 import "./infrastructureList.css"
 
 
-const InfrastructureList = ({infrastructures, infraClickHandler}: { infrastructures: InfrastructureInterface[], infraClickHandler: any }) => {
+const InfrastructureList = ({infrastructures, infraClickHandler, amountRobots}: { infrastructures: InfrastructureInterface[], infraClickHandler: any, amountRobots: number }) => {
     return (
         <div className={"infra-list"}>
             {
                 infrastructures.map(
                     (infrastructure) => {
-                        return <Infrastructure infrastructure={infrastructure} key={infrastructure.id}
-                                               infraClickHandler={infraClickHandler}/>;
+                        return <Infrastructure infrastructure={infrastructure}
+                                               key={infrastructure.id}
+                                               infraClickHandler={infraClickHandler}
+                                               amountRobots={amountRobots}
+                        />;
                     }
                 )
             }
