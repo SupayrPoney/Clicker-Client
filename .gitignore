@@ -23,3 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 /first-app.iml
 /package-lock.json
+/.idea/
