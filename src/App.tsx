@@ -58,11 +58,11 @@ class App extends Component<AppProps, AppState> {
         let infrastructure = infrastructures[infrastructureIndex];
         if (this.state.robots >= infrastructure.price) {
             infrastructure.amount += 1;
-            infrastructure.price = Math.floor(1.1 * infrastructure.price)
             this.setState({
                 infrastructures: infrastructures,
                 robots: this.state.robots - infrastructure.price
-            })
+            });
+            infrastructure.price = Math.floor(1.1 * infrastructure.price);
         }
 
 

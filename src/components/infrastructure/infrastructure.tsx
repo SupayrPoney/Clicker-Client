@@ -12,10 +12,7 @@ export interface InfrastructureInterface {
 export const Infrastructure = ({infrastructure, infraClickHandler, amountRobots}: { infrastructure: InfrastructureInterface, infraClickHandler: any, amountRobots: number }) => {
 
     return <div className={"infrastructure " + (amountRobots >= infrastructure.price ? "affordable" : "unaffordable")}
-                onClick={() => infraClickHandler(infrastructure.id)}
-
-
-    >
+                onClick={() => infraClickHandler(infrastructure.id)}>
         <img className={"ratio-kept"} src={"https://robohash.org/C" + infrastructure.id + "?set=set4"}
              alt={"InfrastructureImage"}/>
         <h1>{infrastructure.name}</h1>
