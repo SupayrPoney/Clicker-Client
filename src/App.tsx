@@ -48,20 +48,25 @@ class App extends Component<AppProps, AppState> {
 
 
     clickHandler() {
-        this.setState({
-            robots: this.state.robots + 1
-        })
+        this.setState((prevState) => {
+                return {
+                    robots: prevState.robots + 1
+                }
+            }
+        )
     }
 
     infraClickHandler = (infrastructureID: number) => {
-        let infrastructures = this.state.infrastructures;
-        let infrastructureIndex = infrastructures.findIndex(infra => infra.id === infrastructureID);
-        let infrastructure = infrastructures[infrastructureIndex];
+        let newInfrastructures = this.state.infrastructures;
+        let infrastructureIndex = newInfrastructures.findIndex(infra => infra.id === infrastructureID);
+        let infrastructure = newInfrastructures[infrastructureIndex];
         if (this.state.robots >= infrastructure.price) {
             infrastructure.amount += 1;
-            this.setState({
-                infrastructures: infrastructures,
-                robots: this.state.robots - infrastructure.price
+            this.setState((prevState) => {
+                return {
+                    infrastructures: newInfrastructures,
+                    robots: prevState.robots - infrastructure.price
+                }
             });
             infrastructure.price = Math.floor(1.1 * infrastructure.price);
         }
@@ -75,9 +80,12 @@ class App extends Component<AppProps, AppState> {
             for (let infra of this.state.infrastructures) {
                 robotsToAdd += infra.amount * infra.income;
             }
-            this.setState({
-                robots: this.state.robots + robotsToAdd / 100
-            })
+            this.setState((prevState) => {
+                    return {
+                        robots: prevState.robots + robotsToAdd / 100
+                    }
+                }
+            )
         }, 10);
     }
 
