@@ -1,0 +1,34 @@
+.infrastructure {
+    display: flex;
+    flex-direction: column;
+    background-color: #86da87;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 25px;
+    /*border: 1px solid grey;*/
+    cursor: pointer;
+    max-width: 150px;
+    text-align: center;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    alignment: center;
+    left: 20px;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+}
+
+.infrastructure:hover {
+    transform: scale(1.05);
+}
+
+.infrastructure:active {
+    transform: scale(0.95);
+}
+
+img.ratio-kept {
+    display: block;
+    max-width: 150px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+}
