@@ -1,17 +1,22 @@
-.card-container {
+.clicker {
     display: flex;
     flex-direction: column;
     background-color: #95dada;
-    border: 1px solid grey;
-    border-radius: 5px;
-    padding: 25px;
+    /*border: 1px solid grey;*/
+    /*padding: 25px;*/
     cursor: pointer;
     -moz-osx-font-smoothing: grayscale;
     backface-visibility: hidden;
+    alignment: center;
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
+    border-radius: 50%;
 }
 
-.card-container:hover {
+.clicker:hover {
     transform: scale(1.05);
+}
+
+.clicker:active {
+    transform: scale(0.95);
 }
