@@ -20,7 +20,7 @@ export class HomePage extends Component<PropsInterface> {
             <Clicker clickHandler={() => this.props.clickHandler()}/>
             <hr/>
             <InfrastructureList infrastructures={this.props.infrastructures}
-                                infraClickHandler={this.props.infraClickHandler}
+                                infraClickHandler={(infraId: number) => this.props.infraClickHandler(infraId)}
                                 amountRobots={this.props.robots}
             />
         </div>;
