@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
-import {Clicker} from "./components/clicker/clicker";
-import InfrastructureList from "./components/infrastructure/infrastructureList";
+import {HomePage} from "./pages/homepage/homepage";
 import {InfrastructureInterface} from "./components/infrastructure/infrastructure";
-import numeral from 'numeral-es6';
 
 interface AppProps {
 
@@ -46,7 +44,6 @@ class App extends Component<AppProps, AppState> {
         };
     }
 
-
     clickHandler() {
         this.setState((prevState) => {
                 return {
@@ -70,8 +67,6 @@ class App extends Component<AppProps, AppState> {
             });
             infrastructure.price = Math.floor(1.1 * infrastructure.price);
         }
-
-
     };
 
     componentDidMount(): void {
@@ -90,18 +85,12 @@ class App extends Component<AppProps, AppState> {
     }
 
     render() {
-        return (
-            <div>
-                <h1 className={"App-header"}>Robot
-                    amount: {numeral(Math.floor(this.state.robots)).format('0.00 a')}</h1>
-                <Clicker clickHandler={() => this.clickHandler()}/>
-                <hr/>
-                <InfrastructureList infrastructures={this.state.infrastructures}
-                                    infraClickHandler={this.infraClickHandler}
-                                    amountRobots={this.state.robots}
-                />
-            </div>
-        );
+        return <HomePage
+            robots={this.state.robots}
+
+            clickHandler={() => this.clickHandler()}
+            infraClickHandler={(id: number) => this.infraClickHandler(id)}
+            infrastructures={this.state.infrastructures}/>;
     }
 }
 
