@@ -11,26 +11,25 @@
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
     border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
+    margin: 20px auto;
+    width: 30%;
 }
 
 
-@media (prefers-reduced-motion: no-preference) {
-    .clicker {
-        animation: robot-spin infinite 20s linear;
-    }
-}
+/*@media (prefers-reduced-motion: no-preference) {*/
+/*    .clicker {*/
+/*        animation: robot-spin infinite 20s linear;*/
+/*    }*/
+/*}*/
 
-@keyframes robot-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
+/*@keyframes robot-spin {*/
+/*    from {*/
+/*        transform: rotate(0deg);*/
+/*    }*/
+/*    to {*/
+/*        transform: rotate(360deg);*/
+/*    }*/
+/*}*/
 
 .clicker:hover {
     transform: scale(1.05) perspective(1px);

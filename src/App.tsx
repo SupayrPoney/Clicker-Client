@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 import './App.css';
 import {HomePage} from "./pages/homepage/homepage";
 import {InfrastructureInterface} from "./components/infrastructure/infrastructure";
+import {Route, Switch} from 'react-router-dom';
+import Settings from "./pages/settings/settings";
 
 interface AppProps {
 
 }
-
 
 interface AppState {
     robots: number,
@@ -22,8 +23,8 @@ class App extends Component<AppProps, AppState> {
                 {
                     id: 0,
                     name: "Factory",
-                    amount: 1,
-                    price: 100,
+                    amount: 0,
+                    price: 10,
                     income: 10
                 },
                 {
@@ -42,6 +43,7 @@ class App extends Component<AppProps, AppState> {
                 }
             ]
         };
+        this.clickHandler = this.clickHandler.bind(this);
     }
 
     clickHandler() {
@@ -85,12 +87,29 @@ class App extends Component<AppProps, AppState> {
     }
 
     render() {
-        return <HomePage
-            robots={this.state.robots}
+        return <div>
 
-            clickHandler={() => this.clickHandler()}
-            infraClickHandler={(id: number) => this.infraClickHandler(id)}
-            infrastructures={this.state.infrastructures}/>;
+            {/*<HomePage*/}
+            {/*    robots={this.state.robots}*/}
+            {/*    clickHandler={() => this.clickHandler()}*/}
+            {/*    infraClickHandler={(id: number) => this.infraClickHandler(id)}*/}
+            {/*    infrastructures={this.state.infrastructures}/>*/}
+            <Switch>
+                <Route
+                    exact
+                    path='/clicker-client'
+                    render={(props: any) => <HomePage {...props}
+                                                      robots={this.state.robots}
+                                                      clickHandler={this.clickHandler}
+                                                      infraClickHandler={(id: number) => this.infraClickHandler(id)}
+                                                      infrastructures={this.state.infrastructures}/>}
+                />
+                <Route exact
+                       path="/settings"
+                       component={Settings}/>
+            </Switch>
+
+        </div>
     }
 }
 
