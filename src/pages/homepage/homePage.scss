@@ -1,0 +1,13 @@
+.container {
+  display: grid;
+}
+
+#left {
+  grid-column: 1;
+  text-align: center;
+}
+
+#right {
+  grid-column: 3;
+  text-align: center;
+}

@@ -12,7 +12,7 @@ interface PropsInterface {
     robots: number
 }
 
-export const HomePage = (props: PropsInterface) => {
+export const MainPage = (props: PropsInterface) => {
 
     return <div>
         <Header/>
