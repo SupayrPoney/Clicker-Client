@@ -115,12 +115,12 @@ class App extends Component<AppProps, AppState> {
             <Switch>
                 <Route
                     exact
-                    path='/'
+                    path='/clicker-client'
                     render={() => <HomePage teams={this.state.teams} ws={this.state.websocket}/>}
                 />
                 <Route
                     exact
-                    path='/clicker-client'
+                    path='/clicker-client/home'
                     render={(props: any) => <MainPage {...props}
                                                       robots={this.state.robots}
                                                       clickHandler={this.clickHandler}
@@ -128,7 +128,7 @@ class App extends Component<AppProps, AppState> {
                                                       infrastructures={this.state.infrastructures}/>}
                 />
                 <Route exact
-                       path="/settings"
+                       path="/clicker-client/settings"
                        component={Settings}/>
             </Switch>
         </div>

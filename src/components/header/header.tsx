@@ -7,10 +7,10 @@ import './header.scss'
 
 export const Header = () => (
     <div className={"header"}>
-        <Link to="/" className={"logo-container"}>
+        <Link to="/clicker-client" className={"logo-container"}>
             <Logo className={"logo"}/>
         </Link>
-        <Link to="/settings" className={"options"}>
+        <Link to="/clicker-client/settings" className={"options"}>
             <a className={"option"}>Options</a>
         </Link>
     </div>
