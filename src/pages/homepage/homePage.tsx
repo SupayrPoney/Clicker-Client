@@ -1,16 +1,15 @@
 import React from 'react';
-import {Header} from "../../components/header/header";
 import Login from "../../components/login/login";
 import "./homePage.scss"
+import {ReactComponent as Logo} from "../../assets/header_robot.svg";
 
 const HomePage = (props: any) => (
-    <div>
-        <Header/>
-        <hr/>
-        <div className={"container"}>
-            <h1 id="left">{props.teams[0]}</h1>
-            <Login id="center"/>
-            <h1 id="right">{props.teams[1]}</h1>
+    <div className={"fullPage"}>
+        <div className="div-center">
+            <Logo className={"logo"}/>
+            <div className={"container"}>
+                <Login teams={props.teams} ws={props.ws}/>
+            </div>
         </div>
     </div>
 );

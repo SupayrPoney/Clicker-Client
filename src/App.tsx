@@ -7,19 +7,21 @@ import Settings from "./pages/settings/settings";
 import HomePage from "./pages/homepage/homePage";
 
 interface AppProps {
-
 }
 
 interface AppState {
     robots: number,
     infrastructures: InfrastructureInterface[],
-    teams: string[]
+    teams: string[],
+    websocket: WebSocket | null
 }
 
 class App extends Component<AppProps, AppState> {
-    private websocket: WebSocket;
+
     constructor(props: AppProps) {
         super(props);
+        let webSocket = new WebSocket("ws://hyperflow.ninja:9001/socket");
+        webSocket.onmessage = (event) => this.wsMessageHandler(event.data);
         this.state = {
             robots: 0,
             infrastructures: [
@@ -45,11 +47,10 @@ class App extends Component<AppProps, AppState> {
                     income: 1000
                 }
             ],
-            teams: []
+            teams: [],
+            websocket: webSocket
         };
         this.clickHandler = this.clickHandler.bind(this);
-        this.websocket = new WebSocket("ws://hyperflow.ninja:9001/socket");
-        this.websocket.onmessage = (event) => this.wsMessageHandler(event.data);
     }
 
     clickHandler() {
@@ -67,10 +68,13 @@ class App extends Component<AppProps, AppState> {
         switch (msg.type) {
             case "available_teams":
                 let teams = msg.payload.teams;
-                console.log(teams)
+                console.log(teams);
                 this.setState({
                     teams: teams
-                })
+                });
+                break;
+            default:
+                console.log(msg)
         }
 
     };
@@ -112,7 +116,7 @@ class App extends Component<AppProps, AppState> {
                 <Route
                     exact
                     path='/'
-                    render={() => <HomePage teams={this.state.teams}/>}
+                    render={() => <HomePage teams={this.state.teams} ws={this.state.websocket}/>}
                 />
                 <Route
                     exact

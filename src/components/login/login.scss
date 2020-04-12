@@ -1,8 +1,9 @@
 .Login {
-  width: 30%;
-  margin: 0 auto;
-  grid-column: 2;
-  grid-row: 2;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  display: table;
+  margin: auto;
 }
 
 button {
@@ -13,6 +14,7 @@ button {
   border: none;
   cursor: pointer;
   width: 100%;
+  font-weight: bold;
 }
 
 button:hover {
@@ -21,9 +23,25 @@ button:hover {
 
 input {
   width: 100%;
+  font-weight: bold;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+}
+
+select {
+  width: 100%;
+  font-weight: bold;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+option {
+  height: 20px;
+  font-weight: bold;
 }

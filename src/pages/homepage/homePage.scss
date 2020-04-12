@@ -1,13 +1,30 @@
+.fullPage {
+  background: #a5a5a5;
+  width: 100%;
+}
+
+.div-center {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  overflow: auto;
+  padding: 1em 2em;
+  display: table;
+  background-color: #fff;
+}
+
 .container {
-  display: grid;
+  display: table;
+  width: 100%;
 }
 
-#left {
-  grid-column: 1;
-  text-align: center;
-}
 
-#right {
-  grid-column: 3;
-  text-align: center;
+div.content {
+  display: table-cell;
+  vertical-align: middle;
 }
