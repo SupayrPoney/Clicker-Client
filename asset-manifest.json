@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.800d21d3.chunk.css",
-    "main.js": "/static/js/main.98cfd9e9.chunk.js",
-    "main.js.map": "/static/js/main.98cfd9e9.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.e08a6e16.js",
-    "runtime-main.js.map": "/static/js/runtime-main.e08a6e16.js.map",
-    "static/js/2.64a74f0d.chunk.js": "/static/js/2.64a74f0d.chunk.js",
-    "static/js/2.64a74f0d.chunk.js.map": "/static/js/2.64a74f0d.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.f43b822c4390e3149382b041fd06f062.js": "/precache-manifest.f43b822c4390e3149382b041fd06f062.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.800d21d3.chunk.css.map": "/static/css/main.800d21d3.chunk.css.map",
-    "static/js/2.64a74f0d.chunk.js.LICENSE.txt": "/static/js/2.64a74f0d.chunk.js.LICENSE.txt",
-    "static/media/header_robot.384e053f.svg": "/static/media/header_robot.384e053f.svg"
+    "main.css": "/clicker-client/static/css/main.800d21d3.chunk.css",
+    "main.js": "/clicker-client/static/js/main.98cfd9e9.chunk.js",
+    "main.js.map": "/clicker-client/static/js/main.98cfd9e9.chunk.js.map",
+    "runtime-main.js": "/clicker-client/static/js/runtime-main.4478585a.js",
+    "runtime-main.js.map": "/clicker-client/static/js/runtime-main.4478585a.js.map",
+    "static/js/2.64a74f0d.chunk.js": "/clicker-client/static/js/2.64a74f0d.chunk.js",
+    "static/js/2.64a74f0d.chunk.js.map": "/clicker-client/static/js/2.64a74f0d.chunk.js.map",
+    "index.html": "/clicker-client/index.html",
+    "precache-manifest.48ffc368ba6b425dab8f250f5e060e68.js": "/clicker-client/precache-manifest.48ffc368ba6b425dab8f250f5e060e68.js",
+    "service-worker.js": "/clicker-client/service-worker.js",
+    "static/css/main.800d21d3.chunk.css.map": "/clicker-client/static/css/main.800d21d3.chunk.css.map",
+    "static/js/2.64a74f0d.chunk.js.LICENSE.txt": "/clicker-client/static/js/2.64a74f0d.chunk.js.LICENSE.txt",
+    "static/media/header_robot.384e053f.svg": "/clicker-client/static/media/header_robot.384e053f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e08a6e16.js",
+    "static/js/runtime-main.4478585a.js",
     "static/js/2.64a74f0d.chunk.js",
     "static/css/main.800d21d3.chunk.css",
     "static/js/main.98cfd9e9.chunk.js"
